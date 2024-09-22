@@ -46,5 +46,6 @@ class SingleReviewView(DetailView):
     
 class AddFavoriteView(View):
     def post(self, request):
-        review_id = request.POSTS['review_id']
-        fav_review = Review.objects.get(pk=review_id)
+        review_id = request.POST["review_id"]
+        request.session["favorite_review"] = review_id
+        return HttpResponseRedirect("/reviews/" + review_id) 
