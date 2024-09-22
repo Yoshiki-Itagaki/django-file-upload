@@ -123,3 +123,5 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/user-media/"
+
+# SESSION_COOKIE_AGE = 120
